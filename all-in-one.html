@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Sitio Web - Portfolio Personal</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #333;
+        min-height: 100vh;
+      }
+
+      header {
+        background: linear-gradient(135deg, #1f3a5f 0%, #0d1b2a 100%);
+        padding: 25px 20px;
+        position: sticky;
+        top: 0;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        z-index: 100;
+      }
+
+      nav {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border-bottom: 3px solid transparent;
+      }
+
+      nav a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-bottom: 3px solid #00d4ff;
+        transform: translateY(-2px);
+      }
+
+      main {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+
+      section {
+        margin-bottom: 60px;
+        padding: 40px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        animation: slideUp 0.6s ease-out;
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      section:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+
+      section:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+
+      h1 {
+        color: #1f3a5f;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        color: #667eea;
+        font-size: 2em;
+        margin-bottom: 20px;
+        border-bottom: 3px solid #667eea;
+        padding-bottom: 10px;
+      }
+
+      p {
+        line-height: 1.8;
+        margin-bottom: 15px;
+        color: #555;
+        font-size: 1.05em;
+      }
+
+      a {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      a:hover {
+        color: #764ba2;
+        text-decoration: underline;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 25px;
+        padding: 15px;
+        background: #f8f9fa;
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+
+      li:hover {
+        background: #f0f2ff;
+        transform: translateX(5px);
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+      }
+
+      li strong {
+        color: #1f3a5f;
+        font-size: 1.15em;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      li a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 15px;
+        background: #667eea;
+        color: white;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+
+      li a:hover {
+        background: #764ba2;
+        transform: scale(1.05);
+        text-decoration: none;
+      }
+
+      .btn-up {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 12px 30px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-size: 1.05em;
+        cursor: pointer;
+        border: none;
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+      }
+
+      .btn-up:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 18px rgba(102, 126, 234, 0.6);
+      }
+
+      .btn-up:active {
+        transform: translateY(-1px);
+      }
+
+      footer {
+        text-align: center;
+        padding: 30px 20px;
+        color: white;
+        font-weight: 500;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      }
+
+      .icon {
+        font-size: 1.2em;
+        margin-right: 5px;
+      }
+
+      .divider {
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #667eea, transparent);
+        margin: 30px 0;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.8em;
+        }
+
+        h2 {
+          font-size: 1.5em;
+        }
+
+        nav {
+          gap: 15px;
+        }
+
+        nav a {
+          font-size: 14px;
+          padding: 8px 12px;
+        }
+
+        section {
+          padding: 25px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="menu-principal">
+      <nav>
+        <a href="#menu-principal">🏠 Inicio</a>
+        <a href="#pasatiempos">🎮 Pasatiempos</a>
+        <a href="#contacto">📞 Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio">
+        <h1>🌟 Bienvenido a Mi Sitio Web</h1>
+        <p>
+          Esta es la página principal de mi mini sitio web. Aquí encontrarás una
+          vista general de mi perfil y acceso rápido a las demás secciones.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Sobre Mí</h2>
+        <p>
+          Me gusta aprender cosas nuevas, explorar proyectos creativos y mantenerme
+          activo en mi tiempo libre. También disfruto compartir ideas y comunicarme
+          con otras personas que comparten mis mismas pasiones.
+        </p>
+
+        <p>
+          Soy una persona apasionada por la tecnología, el diseño y la innovación.
+          Me encanta trabajar en proyectos desafiantes que me permiten crecer
+          profesionalmente y personalmente.
+        </p>
+
+        <p>
+          Puedes visitar mi
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            🔗 red social favorita
+          </a>
+          para ver más contenido relacionado con la tecnología y la creatividad.
+        </p>
+      </section>
+
+      <section id="pasatiempos">
+        <h2>🎯 Mis Pasatiempos</h2>
+        <p>
+          Descubre las actividades que me apasionan y que me permiten disfrutar
+          de mi tiempo libre de manera productiva y entretenida.
+        </p>
+
+        <div class="divider"></div>
+
+        <ul>
+          <li>
+            <strong><span class="icon">📚</span>Leer</strong>
+            Me gusta leer libros de tecnología, historia y ciencia ficción. Es mi
+            forma favorita de aprender cosas nuevas y expandir mi imaginación.
+            <a href="https://www.goodreads.com" target="_blank" rel="noopener noreferrer">
+              → Explorar Goodreads
+            </a>
+          </li>
+
+          <li>
+            <strong><span class="icon">🎵</span>Escuchar música</strong>
+            Disfruto de diferentes géneros musicales y de descubrir nuevos artistas.
+            La música es mi compañía perfecta durante el trabajo y el ejercicio.
+            <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer">
+              → Escuchar en Spotify
+            </a>
+          </li>
+
+          <li>
+            <strong><span class="icon">🎮</span>Jugar videojuegos</strong>
+            Una de mis actividades favoritas es jugar con amigos y explorar nuevos
+            mundos virtuales. Me encanta tanto los juegos competitivos como los de
+            aventura y estrategia.
+            <a href="https://store.steampowered.com" target="_blank" rel="noopener noreferrer">
+              → Ir a Steam
+            </a>
+          </li>
+        </ul>
+
+        <a class="btn-up" href="#menu-principal">⬆️ Volver arriba</a>
+      </section>
+
+      <section id="contacto">
+        <h2>📞 Contacto</h2>
+        <p>
+          ¿Tienes una pregunta o te gustaría conectar conmigo? Aquí te dejo
+          mis canales de comunicación para que podamos estar en contacto.
+        </p>
+
+        <div class="divider"></div>
+
+        <ul>
+          <li>
+            <strong><span class="icon">✉️</span>Enviar un correo</strong>
+            Puedo ayudarte con consultas, propuestas o simplemente para saludarte.
+            <a href="mailto:miemail@ejemplo.com">
+              → Enviar correo a miemail@ejemplo.com
+            </a>
+          </li>
+
+          <li>
+            <strong><span class="icon">☎️</span>Llamar por teléfono</strong>
+            Si prefieres una comunicación más directa, puedo atenderte por teléfono.
+            <a href="tel:+521234567890">
+              → Llamar al +52 123 456 7890
+            </a>
+          </li>
+        </ul>
+
+        <a class="btn-up" href="#menu-principal">⬆️ Volver arriba</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Mi Sitio Web - Todos los derechos reservados ✨</p>
+    </footer>
+  </body>
+</html>
