@@ -65,6 +65,7 @@
         border-radius: 15px;
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
         animation: slideUp 0.6s ease-out;
+        position: relative;
       }
 
       @keyframes slideUp {
@@ -76,6 +77,10 @@
           opacity: 1;
           transform: translateY(0);
         }
+      }
+
+      section:nth-child(1) {
+        animation-delay: 0s;
       }
 
       section:nth-child(2) {
@@ -163,28 +168,106 @@
         text-decoration: none;
       }
 
+      .btn-container {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+      }
+
       .btn-up {
-        display: inline-block;
-        margin-top: 30px;
-        padding: 12px 30px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px 35px;
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
         font-weight: bold;
-        border-radius: 8px;
+        border-radius: 50px;
         transition: all 0.3s ease;
-        font-size: 1.05em;
+        font-size: 1.1em;
         cursor: pointer;
         border: none;
-        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        text-decoration: none;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn-up::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        transition: left 0.3s ease;
+      }
+
+      .btn-up:hover::before {
+        left: 100%;
       }
 
       .btn-up:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 18px rgba(102, 126, 234, 0.6);
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 12px 30px rgba(102, 126, 234, 0.6);
       }
 
       .btn-up:active {
-        transform: translateY(-1px);
+        transform: translateY(-2px) scale(1.02);
+      }
+
+      .btn-up span {
+        position: relative;
+        z-index: 1;
+      }
+
+      .scroll-indicator {
+        display: inline-block;
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .extra-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 15px;
+      }
+
+      .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 25px;
+        background: white;
+        color: #667eea;
+        border: 2px solid #667eea;
+        font-weight: bold;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        font-size: 1em;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .btn-secondary:hover {
+        background: #667eea;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
       }
 
       footer {
@@ -227,13 +310,29 @@
         section {
           padding: 25px;
         }
+
+        .btn-up {
+          padding: 12px 25px;
+          font-size: 1em;
+        }
+
+        .btn-container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .btn-up,
+        .btn-secondary {
+          width: 100%;
+          max-width: 300px;
+        }
       }
     </style>
   </head>
   <body>
     <header id="menu-principal">
       <nav>
-        <a href="#menu-principal">🏠 Inicio</a>
+        <a href="#inicio">🏠 Inicio</a>
         <a href="#pasatiempos">🎮 Pasatiempos</a>
         <a href="#contacto">📞 Contacto</a>
       </nav>
@@ -310,11 +409,19 @@
           </li>
         </ul>
 
-        <a class="btn-up" href="#menu-principal">⬆️ Volver arriba</a>
+        <div class="btn-container">
+          <a href="#menu-principal" class="btn-up">
+            <span class="scroll-indicator">⬆️</span>
+            <span>Volver al Inicio</span>
+          </a>
+          <a href="#contacto" class="btn-secondary">
+            <span>📞 Ir a Contacto</span>
+          </a>
+        </div>
       </section>
 
       <section id="contacto">
-        <h2>📞 Contacto</h2>
+        <h2>📞 Contacto - Zazuke33</h2>
         <p>
           ¿Tienes una pregunta o te gustaría conectar conmigo? Aquí te dejo
           mis canales de comunicación para que podamos estar en contacto.
@@ -326,26 +433,34 @@
           <li>
             <strong><span class="icon">✉️</span>Enviar un correo</strong>
             Puedo ayudarte con consultas, propuestas o simplemente para saludarte.
-            <a href="mailto:miemail@ejemplo.com">
-              → Enviar correo a miemail@ejemplo.com
+            <a href="mailto:zazukeuchij@gmail.com">
+              → Enviar correo a zazukeuchij@gmail.com
             </a>
           </li>
 
           <li>
             <strong><span class="icon">☎️</span>Llamar por teléfono</strong>
             Si prefieres una comunicación más directa, puedo atenderte por teléfono.
-            <a href="tel:+521234567890">
-              → Llamar al +52 123 456 7890
+            <a href="tel:+525568828206">
+              → Llamar al +52 556 882 8206
             </a>
           </li>
         </ul>
 
-        <a class="btn-up" href="#menu-principal">⬆️ Volver arriba</a>
+        <div class="btn-container">
+          <a href="#menu-principal" class="btn-up">
+            <span class="scroll-indicator">⬆️</span>
+            <span>Volver al Inicio</span>
+          </a>
+          <a href="#pasatiempos" class="btn-secondary">
+            <span>🎮 Ir a Pasatiempos</span>
+          </a>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>© 2026 Mi Sitio Web - Todos los derechos reservados ✨</p>
+      <p>© 2026 Mi Sitio Web - Zazuke33 - Todos los derechos reservados ✨</p>
     </footer>
   </body>
 </html>
