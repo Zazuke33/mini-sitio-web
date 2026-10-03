@@ -17,9 +17,25 @@
 
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #1f1b2d 0%, #2d1f3d 50%, #3c2a4c 100%);
+        background-color: #1c1026;
+        background-image:
+          url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/778.png"),
+          url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"),
+          url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png"),
+          url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png");
+        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+        background-position: 92% 18%, 7% 72%, 88% 82%, 15% 18%;
+        background-size: 220px, 180px, 200px, 170px;
         color: #f4f0ff;
         min-height: 100vh;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(28, 16, 38, 0.78), rgba(44, 20, 52, 0.72));
+        z-index: -1;
       }
 
       header {
@@ -272,18 +288,18 @@
   <body>
     <header id="menu-principal">
       <nav>
-        <a href="#inicio">🏠 Inicio</a>
-        <a href="#pasatiempos">🎮 Pasatiempos</a>
-        <a href="#contacto">📞 Contacto</a>
+        <a href="#inicio">Inicio</a>
+        <a href="#pasatiempos">Pasatiempos</a>
+        <a href="#contacto">Contacto</a>
       </nav>
     </header>
 
     <main>
       <section id="inicio">
-        <h1>🌙 Mimikyu, el Pokémon de la máscara</h1>
+        <h1>Mimikyu, el Pokemon de la mascara</h1>
         <p>
-          Mimikyu es un Pokémon muy tímido y misterioso que se esconde bajo una máscara hecha de tela
-          para ocultar su cara. Aunque parece temeroso, en realidad guarda un gran corazón y una gran
+          Mimikyu es un Pokemon muy timido y misterioso que se esconde bajo una mascara hecha de tela
+          para ocultar su cara. Aunque parece temeroso, en realidad guarda un gran corazon y una gran
           personalidad.
         </p>
 
@@ -291,30 +307,30 @@
 
         <h2>Sobre Mimikyu</h2>
         <p>
-          Se dice que Mimikyu ama imitar a otros Pokémon para sentirse más seguro, y por eso intenta
+          Se dice que Mimikyu ama imitar a otros Pokemon para sentirse mas seguro, y por eso intenta
           copiar sus gestos y movimientos. Le encanta permanecer a la sombra y evitar ser visto, pero
-          aún así quiere sentirse aceptado.
+          aun asi quiere sentirse aceptado.
         </p>
 
         <p>
-          Su apariencia es muy singular: una silueta oscura con una máscara que le da un aire extraño y
-          encantador. Por eso muchos entrenadores lo consideran uno de los Pokémon más originales de la región.
+          Su apariencia es muy singular: una silueta oscura con una mascara que le da un aire extraño y
+          encantador. Por eso muchos entrenadores lo consideran uno de los Pokemon mas originales de la region.
         </p>
 
         <p>
-          Puedes visitar su ventana oficial en la web de Pokémon para conocer más sobre este adorable y extraño
+          Puedes visitar su ventana oficial en la web de Pokemon para conocer mas sobre este adorable y extraño
           criatura:
           <a href="https://www.pokemon.com/es/pokedex/mimikyu" target="_blank" rel="noopener noreferrer">
-            🔗 Ver Pokédex de Mimikyu
+            Ver Pokédex de Mimikyu
           </a>
         </p>
       </section>
 
       <section id="pasatiempos">
-        <h2>🎯 Pasatiempos de un fan de Mimikyu</h2>
+        <h2>Pasatiempos de un fan de Mimikyu</h2>
         <p>
           Si te gusta Mimikyu, probablemente disfrutes de actividades relacionadas con la creatividad,
-          los videojuegos, la colección de figuras y la comunidad Pokémon.
+          los videojuegos, la coleccion de figuras y la comunidad Pokemon.
         </p>
 
         <div class="divider"></div>
@@ -325,24 +341,24 @@
             Crear ilustraciones de Mimikyu con diferentes poses y expresiones es una excelente forma de mostrar
             tu creatividad.
             <a href="https://www.deviantart.com" target="_blank" rel="noopener noreferrer">
-              → Ver arte de Pokémon
+              Ver arte de Pokemon
             </a>
           </li>
 
           <li>
-            <strong><span class="icon">🎵</span>Escuchar música de videojuegos</strong>
-            La música de Pokémon y de videojuegos es perfecta para relajarse mientras se juega o se crea fan art.
+            <strong><span class="icon">🎵</span>Escuchar musica de videojuegos</strong>
+            La musica de Pokemon y de videojuegos es perfecta para relajarse mientras se juega o se crea fan art.
             <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer">
-              → Escuchar música
+              Escuchar musica
             </a>
           </li>
 
           <li>
-            <strong><span class="icon">🎮</span>Jugar Pokémon</strong>
+            <strong><span class="icon">🎮</span>Jugar Pokemon</strong>
             Disfrutar de aventuras, capturar criaturas y explorar nuevos mundos es una de las mejores formas de vivir
-            la emoción de la serie.
+            la emocion de la serie.
             <a href="https://www.pokemon.com/es/jcc-pokemon" target="_blank" rel="noopener noreferrer">
-              → Explorar Pokémon
+              Explorar Pokemon
             </a>
           </li>
         </ul>
@@ -359,10 +375,10 @@
       </section>
 
       <section id="contacto">
-        <h2>📞 Contacto</h2>
+        <h2>Contacto</h2>
         <p>
-          Si te encanta Mimikyu y quieres hablar de Pokémon, fan art, videojuegos o colecciones,
-          aquí tienes medios para contactarte.
+          Si te encanta Mimikyu y quieres hablar de Pokemon, fan art, videojuegos o colecciones,
+          aqui tienes medios para contactarte.
         </p>
 
         <div class="divider"></div>
@@ -370,17 +386,17 @@
         <ul>
           <li>
             <strong><span class="icon">✉️</span>Enviar un correo</strong>
-            Puedes escribirme para hablar sobre Pokémon, creatividad o proyectos.
+            Puedes escribirme para hablar sobre Pokemon, creatividad o proyectos.
             <a href="mailto:zazukeuchij@gmail.com">
-              → Enviar correo a zazukeuchij@gmail.com
+              Enviar correo a zazukeuchij@gmail.com
             </a>
           </li>
 
           <li>
-            <strong><span class="icon">☎️</span>Llamar por teléfono</strong>
-            Si prefieres comunicarte directamente, también puedes hacerlo por teléfono.
+            <strong><span class="icon">☎️</span>Llamar por telefono</strong>
+            Si prefieres comunicarte directamente, tambien puedes hacerlo por telefono.
             <a href="tel:+525568828206">
-              → Llamar al +52 556 882 8206
+              Llamar al +52 556 882 8206
             </a>
           </li>
         </ul>
